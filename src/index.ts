@@ -3,6 +3,10 @@ export interface IEtagObject<T = any> {
 	data: T;
 }
 
+interface IWithEtagObject<T = any> extends IEtagObject<T> {
+	etag: string;
+}
+
 /**
  * Build ETag Object
  * @param data data inside of object
@@ -33,7 +37,7 @@ export const unWrapEtag = <T = any>(etagData: IEtagObject<T>): T => {
  * @param etagData ETag Object
  * @return {<T>} object data
  */
-export const getETag = <T = any>(etagData: IEtagObject<T>): string | null => {
+export const getETag = <T = any>(etagData: IWithEtagObject<T>): string => {
 	if (!isEtagObject(etagData)) {
 		throw new TypeError('data is not ETag object');
 	}
@@ -45,7 +49,7 @@ export const getETag = <T = any>(etagData: IEtagObject<T>): string | null => {
  * @param etagData ETag Object
  * @return {boolean}
  */
-export const haveETag = (etagData: any): boolean => {
+export const haveETag = <T = any>(etagData: IEtagObject<T>): etagData is IWithEtagObject<T> => {
 	if (!isEtagObject(etagData)) {
 		return false;
 	}
