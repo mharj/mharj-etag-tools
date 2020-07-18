@@ -1,10 +1,10 @@
-export interface IEtagObject<T = any> {
-	etag: string | null;
-	data: T;
+export interface IEtagObject<T = unknown> {
+	readonly etag: string | null;
+	readonly data: T;
 }
 
-interface IWithEtagObject<T = any> extends IEtagObject<T> {
-	etag: string;
+interface IWithEtagObject<T = unknown> extends IEtagObject<T> {
+	readonly etag: string;
 }
 
 /**
@@ -13,7 +13,7 @@ interface IWithEtagObject<T = any> extends IEtagObject<T> {
  * @param etag ETag or null
  * @return {IEtagObject<T>}
  */
-export const wrapEtag = <T = any>(data: T, etag: string | null = null): IEtagObject<T> => {
+export const wrapEtag = <T = unknown>(data: T, etag: string | null = null): IEtagObject<T> => {
 	return {
 		data,
 		etag,
@@ -25,7 +25,7 @@ export const wrapEtag = <T = any>(data: T, etag: string | null = null): IEtagObj
  * @param etagData ETag Object
  * @return {<T>} object data
  */
-export const unWrapEtag = <T = any>(etagData: IEtagObject<T>): T => {
+export const unWrapEtag = <T = unknown>(etagData: IEtagObject<T>): T => {
 	if (!isEtagObject(etagData)) {
 		throw new TypeError('data is not ETag object');
 	}
@@ -37,7 +37,7 @@ export const unWrapEtag = <T = any>(etagData: IEtagObject<T>): T => {
  * @param etagData ETag Object
  * @return {<T>} object data
  */
-export const getETag = <T = any>(etagData: IWithEtagObject<T>): string => {
+export const getETag = <T = unknown>(etagData: IWithEtagObject<T>): string => {
 	if (!isEtagObject(etagData)) {
 		throw new TypeError('data is not ETag object');
 	}
@@ -49,7 +49,7 @@ export const getETag = <T = any>(etagData: IWithEtagObject<T>): string => {
  * @param etagData ETag Object
  * @return {boolean}
  */
-export const haveETag = <T = any>(etagData: IEtagObject<T>): etagData is IWithEtagObject<T> => {
+export const haveETag = <T = unknown>(etagData: IEtagObject<T>): etagData is IWithEtagObject<T> => {
 	if (!isEtagObject(etagData)) {
 		return false;
 	}
@@ -59,7 +59,7 @@ export const haveETag = <T = any>(etagData: IEtagObject<T>): etagData is IWithEt
 /**
  * validates Etag Object
  */
-export const isEtagObject = <T = any>(data: IEtagObject<T>): data is IEtagObject<T> => {
+export const isEtagObject = <T = unknown>(data: IEtagObject<T>): data is IEtagObject<T> => {
 	return data && typeof data === 'object' && 'etag' in data && 'data' in data;
 };
 
