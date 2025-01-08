@@ -10,7 +10,7 @@ if (haveETag(todo)) {
 const res = await fetch('https://jsonplaceholder.typicode.com/todos/1', {headers});
 if (res.status === 200) {
     const data = await res.json();
-	const todoEtagObject = wrapEtag(data, getEtagHeader(res));
-	dispatch(storeTodo(todoEtagObject));
+    const todoEtagObject = wrapEtag(data, getEtagHeader(res));
+    dispatch(storeTodo(todoEtagObject));
 }
 ```

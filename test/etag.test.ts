@@ -1,12 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable import/first */
-process.env.NODE_ENV = 'testing';
-import {expect} from 'chai';
-import 'mocha';
-
-import {Headers} from 'cross-fetch';
-
-import {wrapEtag, unWrapEtag, getETag, haveETag, IEtagObject, getEtagHeader} from '../src/index';
+import {describe, expect, it} from 'vitest';
+import {getETag, getEtagHeader, haveETag, type IEtagObject, unWrapEtag, wrapEtag} from '../src/index';
 
 describe('etag utils', () => {
 	describe('wrapEtag', () => {
@@ -54,44 +48,12 @@ describe('etag utils', () => {
 		it('tests to read etag from header', async () => {
 			const headers = new Headers();
 			headers.set('ETag', '123');
-			const res: Response = {
-				headers,
-				ok: true,
-				redirected: false,
-				status: 200,
-				statusText: 'ok',
-				type: 'default',
-				url: 'http://localhost',
-				clone: () => res,
-				body: null,
-				bodyUsed: false,
-				arrayBuffer: () => Promise.resolve(new ArrayBuffer(1)),
-				blob: () => Promise.resolve(new Blob()),
-				formData: () => Promise.resolve(new FormData()),
-				json: () => Promise.resolve(''),
-				text: () => Promise.resolve(''),
-			};
+			const res = new Response('body', {headers});
 			expect(getEtagHeader(res)).to.be.eql('123');
 		});
 		it('tests to read no etag from header', async () => {
 			const headers = new Headers();
-			const res: Response = {
-				headers,
-				ok: true,
-				redirected: false,
-				status: 200,
-				statusText: 'ok',
-				type: 'default',
-				url: 'http://localhost',
-				clone: () => res,
-				body: null,
-				bodyUsed: false,
-				arrayBuffer: () => Promise.resolve(new ArrayBuffer(1)),
-				blob: () => Promise.resolve(new Blob()),
-				formData: () => Promise.resolve(new FormData()),
-				json: () => Promise.resolve(''),
-				text: () => Promise.resolve(''),
-			};
+			const res = new Response('body', {headers});
 			expect(getEtagHeader(res)).to.be.eql(null);
 		});
 	});

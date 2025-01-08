@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="9" failures="0" errors="0" time="1.251">
+    <testsuite name="test/etag.test.ts" timestamp="2025-01-08T07:09:58.893Z" hostname="DESKTOP-OPF6PCI" tests="9" failures="0" errors="0" skipped="0" time="0.0425556">
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; wrapEtag &gt; test wrap data without etag" time="0.0031154">
+        </testcase>
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; wrapEtag &gt; test wrap data with etag" time="0.0003668">
+        </testcase>
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; unWrapEtag &gt; test unwrap data" time="0.00046">
+        </testcase>
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; unWrapEtag &gt; should not unwrap data from broken object" time="0.0013587">
+        </testcase>
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; unWrapEtag &gt; should not get etag from broken object" time="0.0004399">
+        </testcase>
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; haveETag &gt; test object have etag" time="0.0005392">
+        </testcase>
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; getETag &gt; tests to read etag" time="0.0003836">
+        </testcase>
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; getEtagHeader &gt; tests to read etag from header" time="0.0330699">
+        </testcase>
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; getEtagHeader &gt; tests to read no etag from header" time="0.0003799">
+        </testcase>
+    </testsuite>
+</testsuites>
