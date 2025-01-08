@@ -1,11 +1,11 @@
 {
 	"compilerOptions": {
-		"module": "commonjs",
+		"module": "preserve",
 		"target": "es6",
 		"lib": ["es2017", "dom"],
 		"rootDir": "./src",
 		"outDir": "./dist",
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
 		"sourceRoot": "./src",
 		"types": ["node"],
 		"declaration": true,
@@ -19,7 +19,8 @@
 		"noImplicitAny": true,
 		"importHelpers": false,
 		"strictNullChecks": true,
-		"noUnusedLocals": true
+		"noUnusedLocals": true,
+		"skipLibCheck": true
 	},
 	"include": ["src/"],
 	"exclude": ["node_modules", "**/*.spec.ts", "test"]
