@@ -1,6 +1,6 @@
 {
     "name": "mharj-etag-tools",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "etag object tools",
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
