@@ -10,11 +10,12 @@
 		"standard",
 		"eslint:recommended",
 		"plugin:@typescript-eslint/eslint-recommended",
-		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/strict-type-checked",
 		"plugin:prettier/recommended",
 		"plugin:sonarjs/recommended"
 	],
 	"rules": {
+		"curly": "error",
 		"camelcase": 1,
 		"@typescript-eslint/no-this-alias": [
 			"warn",
@@ -51,6 +52,7 @@
 				"exceptAfterSingleLine": true
 			}
 		],
-		"@typescript-eslint/consistent-type-imports": ["warn", {"prefer": "type-imports", "fixStyle": "inline-type-imports"}]
+		"@typescript-eslint/consistent-type-imports": ["warn", {"prefer": "type-imports", "fixStyle": "inline-type-imports"}],
+		"@typescript-eslint/no-unnecessary-condition": "off"
 	}
 }

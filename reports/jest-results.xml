@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites name="vitest tests" tests="9" failures="0" errors="0" time="1.251">
-    <testsuite name="test/etag.test.ts" timestamp="2025-01-08T07:09:58.893Z" hostname="DESKTOP-OPF6PCI" tests="9" failures="0" errors="0" skipped="0" time="0.0425556">
-        <testcase classname="test/etag.test.ts" name="etag utils &gt; wrapEtag &gt; test wrap data without etag" time="0.0031154">
+<testsuites name="vitest tests" tests="14" failures="0" errors="0" time="1.198">
+    <testsuite name="test/etag.test.ts" timestamp="2025-01-10T06:51:46.379Z" hostname="DESKTOP-OPF6PCI" tests="14" failures="0" errors="0" skipped="0" time="0.0412333">
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; wrapEtag &gt; test wrap data without etag" time="0.0031819">
         </testcase>
-        <testcase classname="test/etag.test.ts" name="etag utils &gt; wrapEtag &gt; test wrap data with etag" time="0.0003668">
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; wrapEtag &gt; test wrap data with etag" time="0.0003622">
         </testcase>
-        <testcase classname="test/etag.test.ts" name="etag utils &gt; unWrapEtag &gt; test unwrap data" time="0.00046">
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; unWrapEtag &gt; test unwrap data" time="0.0004375">
         </testcase>
-        <testcase classname="test/etag.test.ts" name="etag utils &gt; unWrapEtag &gt; should not unwrap data from broken object" time="0.0013587">
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; unWrapEtag &gt; should not unwrap data from broken object" time="0.0013518">
         </testcase>
-        <testcase classname="test/etag.test.ts" name="etag utils &gt; unWrapEtag &gt; should not get etag from broken object" time="0.0004399">
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; unWrapEtag &gt; should not get etag from broken object" time="0.0004293">
         </testcase>
-        <testcase classname="test/etag.test.ts" name="etag utils &gt; haveETag &gt; test object have etag" time="0.0005392">
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; unWrapEtagResult &gt; test unwrap data" time="0.0005656">
         </testcase>
-        <testcase classname="test/etag.test.ts" name="etag utils &gt; getETag &gt; tests to read etag" time="0.0003836">
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; unWrapEtagResult &gt; should not unwrap data from broken object" time="0.0005264">
         </testcase>
-        <testcase classname="test/etag.test.ts" name="etag utils &gt; getEtagHeader &gt; tests to read etag from header" time="0.0330699">
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; unWrapEtagResult &gt; should not get etag from broken object" time="0.0004919">
         </testcase>
-        <testcase classname="test/etag.test.ts" name="etag utils &gt; getEtagHeader &gt; tests to read no etag from header" time="0.0003799">
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; haveETag &gt; test object have etag" time="0.0005047">
+        </testcase>
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; getETag &gt; tests to read etag" time="0.0002851">
+        </testcase>
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; getETagResult &gt; tests to read etag" time="0.0003328">
+        </testcase>
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; getETagResult &gt; tests to read etag" time="0.0004132">
+        </testcase>
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; getEtagHeader &gt; tests to read etag from header" time="0.029363">
+        </testcase>
+        <testcase classname="test/etag.test.ts" name="etag utils &gt; getEtagHeader &gt; tests to read no etag from header" time="0.0003807">
         </testcase>
     </testsuite>
 </testsuites>

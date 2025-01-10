@@ -36,6 +36,7 @@
     },
     "homepage": "https://github.com/mharj/mharj-etag-tools#readme",
     "devDependencies": {
+        "@luolapeikko/result-option": "^1.0.5",
         "@stylistic/eslint-plugin": "^2.12.1",
         "@stylistic/eslint-plugin-ts": "^2.12.1",
         "@types/node": "^22.10.5",
@@ -52,8 +53,12 @@
         "prettier": "^3.4.2",
         "source-map-support": "^0.5.21",
         "tsup": "^8.3.5",
-        "typescript": "^5.7.2",
+        "typescript": "^5.7.3",
         "vite": "^6.0.7",
         "vitest": "^2.1.8"
-    }
+    },
+    "peerDependencies": {
+        "@luolapeikko/result-option": "^1.x"
+    },
+    "packageManager": "pnpm@9.15.3+sha512.1f79bc245a66eb0b07c5d4d83131240774642caaa86ef7d0434ab47c0d16f66b04e21e0c086eb61e62c77efc4d7f7ec071afad3796af64892fae66509173893a"
 }

@@ -19,8 +19,10 @@
 		"noImplicitAny": true,
 		"importHelpers": false,
 		"strictNullChecks": true,
+		"noUncheckedIndexedAccess": true,
 		"noUnusedLocals": true,
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"strict": true
 	},
 	"include": ["src/"],
 	"exclude": ["node_modules", "**/*.spec.ts", "test"]
