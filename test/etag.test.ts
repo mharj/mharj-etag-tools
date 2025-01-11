@@ -1,7 +1,3 @@
-/* eslint-disable sonarjs/no-duplicate-string */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import {describe, expect, it} from 'vitest';
 import {getETag, getEtagHeader, getETagResult, haveETag, type IEtagObject, unWrapEtag, unWrapEtagResult, wrapEtag} from '../src/index';
 

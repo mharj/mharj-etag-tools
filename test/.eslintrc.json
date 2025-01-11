@@ -1,0 +1,14 @@
+{
+	"overrides": [
+		{
+			"files": ["**/*.ts"],
+			"rules": {
+				"no-console": "off",
+				"sonarjs/no-duplicate-string": "off",
+				"@typescript-eslint/no-unsafe-argument": "off",
+				"@typescript-eslint/no-unsafe-assignment": "off",
+				"@typescript-eslint/no-explicit-any": "off"
+			}
+		}
+	]
+}
