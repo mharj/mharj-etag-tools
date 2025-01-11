@@ -22,10 +22,10 @@ describe('etag utils', function () {
 			expect(unWrapEtag({data: ['hello'], etag: '123'})).to.be.eql(['hello']);
 		});
 		it('should not unwrap data from broken object', function () {
-			expect(unWrapEtag.bind(null, '123123123')).to.throw(TypeError, 'data is not ETag object');
+			expect(() => unWrapEtag('123123123' as any)).to.throw(TypeError, 'data is not ETag object');
 		});
 		it('should not get etag from broken object', function () {
-			expect(getETag.bind(null, '123123123')).to.throw(TypeError, 'data is not ETag object');
+			expect(() => getETag('123123123' as any)).to.throw(TypeError, 'data is not ETag object');
 		});
 	});
 	describe('unWrapEtagResult', function () {
