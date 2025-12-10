@@ -1,5 +1,5 @@
 import {describe, expect, it} from 'vitest';
-import {getETag, getEtagHeader, getETagResult, haveETag, type IEtagObject, unWrapEtag, unWrapEtagResult, wrapEtag} from '../src/index';
+import {getETag, getETagResult, getEtagHeader, haveETag, type IEtagObject, unWrapEtag, unWrapEtagResult, wrapEtag} from '../src/index';
 
 describe('etag utils', function () {
 	describe('wrapEtag', function () {
