@@ -3,7 +3,7 @@
     "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
     "files": {
         "ignoreUnknown": true,
-        "includes": ["**/*.ts", "**/*.json", "!**/package.json"]
+        "includes": ["**/*.ts", "**/*.mts", "**/*.json", "!**/package.json"]
     },
     "formatter": {
         "enabled": true,
@@ -27,7 +27,7 @@
     "linter": {
         "enabled": true,
         "rules": {
-            "recommended": false,
+            "preset": "none",
             "complexity": {
                 "noAdjacentSpacesInRegex": "error",
                 "noBannedTypes": "error",

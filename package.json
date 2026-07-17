@@ -2,27 +2,28 @@
     "name": "mharj-etag-tools",
     "version": "0.0.7",
     "description": "etag object tools",
-    "main": "./dist/index.js",
-    "module": "./dist/index.mjs",
-    "types": "./dist/index.d.ts",
-    "exports": {
-        ".": {
-            "types": "./dist/index.d.ts",
-            "require": "./dist/index.js",
-            "import": "./dist/index.mjs"
-        }
-    },
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.mts",
+	"exports": {
+		"import": {
+			"types": "./dist/index.d.mts",
+			"default": "./dist/index.mjs"
+		},
+		"require": {
+			"types": "./dist/index.d.cts",
+			"default": "./dist/index.cjs"
+		},
+		"default": "./dist/index.mjs"
+	},
     "scripts": {
-        "build": "tsup src/index.ts --minify --sourcemap --format cjs,esm --dts --clean",
+        "build": "tsdown src/index.ts --minify --sourcemap --format cjs,esm --dts --clean",
         "prepublishOnly": "npm run build",
         "test": "vitest test --run --no-isolate --coverage",
         "lint": "biome check",
         "validate": "tsc --noEmit --project tsconfig.test.json"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/mharj/mharj-etag-tools.git"
-    },
+    "repository": "github:mharj/mharj-etag-tools",
     "keywords": [
         "etag"
     ],
@@ -36,15 +37,15 @@
     },
     "homepage": "https://github.com/mharj/mharj-etag-tools#readme",
     "devDependencies": {
-        "@biomejs/biome": "2.5.0",
-        "@luolapeikko/result-option": "^2.2.3",
-        "@types/node": "^24.13.2",
-        "@vitest/coverage-v8": "^4.1.9",
-        "c8": "^11.0.0",
-        "tsup": "^8.5.1",
-        "typescript": "^6.0.3",
-        "vite": "^8.0.16",
-        "vitest": "^4.1.9"
+        "@biomejs/biome": "2.5.4",
+        "@luolapeikko/result-option": "^2.4.0",
+        "@types/node": "^24.13.3",
+        "@vitest/coverage-v8": "^4.1.10",
+        "c8": "^12.0.0",
+        "tsdown": "^0.22.9",
+        "typescript": "^7.0.2",
+        "vite": "^8.1.5",
+        "vitest": "^4.1.10"
     },
     "peerDependencies": {
         "@luolapeikko/result-option": ">= 1.0.0"
